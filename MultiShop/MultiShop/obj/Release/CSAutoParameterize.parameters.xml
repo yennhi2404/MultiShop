@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MultiShop-Web.config Connection String" description="MultiShop Connection String used in web.config by the application to access the database." defaultValue="Server=DRAGON-PC\SQLEXPRESS;Database=MultiShop; Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\429\\MultiShop\\MultiShop\\obj\\Release\\Package\\PackageTmp\\Views\\Web\.config$" match="/configuration/connectionStrings/add[@name='MultiShop']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="E:\\429\\MultiShop\\MultiShop\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MultiShop']/@connectionString" />
+  </parameter>
+  <parameter name="MultiShop_DatabasePublish-Web.config Connection String" description="MultiShop_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="MultiShop_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\429\\MultiShop\\MultiShop\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MultiShop_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

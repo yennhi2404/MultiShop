@@ -1,0 +1,130 @@
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\MultiShop.dll.config
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\MultiShop.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\MultiShop.pdb
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Antlr3.Runtime.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\EntityFramework.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\EntityFramework.SqlServer.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Newtonsoft.Json.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Owin.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Net.Http.Formatting.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Helpers.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Http.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Http.WebHost.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Mvc.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Optimization.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Razor.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.WebPages.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\WebGrease.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Helpers.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Mvc.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Optimization.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Razor.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.WebPages.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Newtonsoft.Json.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Antlr3.Runtime.pdb
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Net.Http.Formatting.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Http.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\System.Web.Http.WebHost.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\EntityFramework.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\EntityFramework.SqlServer.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\obj\Release\MultiShop.dll
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\obj\Release\MultiShop.pdb
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\obj\Release\MultiShop.csprojResolveAssemblyReference.cache
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\obj\Release\MultiShop.Migrations.InitialCreate.resources
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\obj\Release\MultiShop.csproj.GenerateResource.Cache
+C:\Users\vanka\Documents\Visual Studio 2013\Projects\MultiShop\MultiShop\obj\Release\MultiShop.Migrations.van.resources
+E:\429\MultiShop\MultiShop\bin\MultiShop.dll.config
+E:\429\MultiShop\MultiShop\bin\MultiShop.dll
+E:\429\MultiShop\MultiShop\bin\MultiShop.pdb
+E:\429\MultiShop\MultiShop\bin\Antlr3.Runtime.dll
+E:\429\MultiShop\MultiShop\bin\EntityFramework.dll
+E:\429\MultiShop\MultiShop\bin\EntityFramework.SqlServer.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Core.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Cookies.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Facebook.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Google.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.OAuth.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Twitter.dll
+E:\429\MultiShop\MultiShop\bin\Microsoft.Web.Infrastructure.dll
+E:\429\MultiShop\MultiShop\bin\Newtonsoft.Json.dll
+E:\429\MultiShop\MultiShop\bin\Owin.dll
+E:\429\MultiShop\MultiShop\bin\System.Net.Http.Formatting.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Helpers.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Http.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Http.WebHost.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Mvc.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Optimization.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Razor.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.WebPages.Deployment.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.WebPages.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.WebPages.Razor.dll
+E:\429\MultiShop\MultiShop\bin\WebGrease.dll
+E:\429\MultiShop\MultiShop\bin\System.Web.Helpers.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.Mvc.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.Optimization.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.Razor.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.WebPages.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.WebPages.Deployment.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.WebPages.Razor.xml
+E:\429\MultiShop\MultiShop\bin\Newtonsoft.Json.xml
+E:\429\MultiShop\MultiShop\bin\Antlr3.Runtime.pdb
+E:\429\MultiShop\MultiShop\bin\System.Net.Http.Formatting.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.Http.xml
+E:\429\MultiShop\MultiShop\bin\System.Web.Http.WebHost.xml
+E:\429\MultiShop\MultiShop\bin\EntityFramework.xml
+E:\429\MultiShop\MultiShop\bin\EntityFramework.SqlServer.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Core.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Facebook.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Cookies.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.OAuth.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Google.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.Twitter.xml
+E:\429\MultiShop\MultiShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.csprojAssemblyReference.cache
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.Migrations.InitialCreate.resources
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.Migrations.van.resources
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.csproj.GenerateResource.cache
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.csproj.CoreCompileInputs.cache
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.csproj.CopyComplete
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.dll
+E:\429\MultiShop\MultiShop\obj\Release\MultiShop.pdb
