@@ -1,40 +1,44 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - MultiShop</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Đến với MultiShop bạn có thể thỏa sức mua sắm các sản phẩm với giá cả phải chăng mà chẳng cần phải đi đâu xa. Chỉ một cú click chuột, sản phẩm sẽ nằm trong tầm tay bạn. Hãy đến và trải nghiệm với chúng tôi!" />
+	<meta name="keywords" content="dienthoai, maytinh, thoitrang" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - MultiShop</title>
+	@RenderSection("metasocials", required: false)
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153074347-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-153074347-1');
+	</script>
 
 </head>
-<body>
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=559768260768581&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+<body onload="shareFunction()">
     <div class="container">
-        <header class="nn-header">
-            <div class=" col-sm-3 col-md-3 nn-text-align-center">
-                <a href="/"><img src="/Content/img/logo.png" class="img-responsive" /></a>
-            </div><!--end logo-->
-            <div class="col-md-6 col-sm-6 ">
-                @Html.Partial("_Search")
-            </div><!--end search box-->
-            <div class="nn-cart-box col-sm-3 col-md-3 ">
-                <div class="nn-top-cart-wrapper ">
-                    <div class="nn-top-cart-contain">
-                       @Html.Partial("_CartInfo")
-                    </div>
-                </div>
-            </div><!--end cart box-->
-        </header>
+		<header class="nn-header">
+			<div class=" col-sm-3 col-md-3 nn-text-align-center">
+				<a href="/"><img src="/Content/img/logo.png" class="img-responsive" alt="logo" /></a>
+			</div><!--end logo-->
+			
+			<div class="col-md-6 col-sm-6 ">
+				@Html.Partial("_Search")
+			</div><!--end search box-->
+			<div class="nn-cart-box col-sm-3 col-md-3 ">
+				<div class="nn-top-cart-wrapper ">
+					<div class="nn-top-cart-contain">
+						@Html.Partial("_CartInfo")
+					</div>
+				</div>
+			</div><!--end cart box-->
+		</header>
 
         <div class="navbar navbar-default">
             <div class="navbar-header">
@@ -46,7 +50,6 @@
                 </button>
                 <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home "></span></a>
             </div>
-
 
             <div class="navbar-collapse collapse js-navbar-collapse">
                 @Html.Partial("_Menu");
@@ -67,10 +70,10 @@
     @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
     <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
-    <script src="~/Content/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery-ui.js"></script>
         @RenderSection("scripts", required: false)
     
-    <script>
+    <script type="text/javascript">
         $(function () {
             $("#search").autocomplete({
                 source: "/Home/Search",
