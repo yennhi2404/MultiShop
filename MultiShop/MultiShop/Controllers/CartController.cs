@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MultiShop.Helpers;
 
 namespace MultiShop.Controllers
 {
     public class CartController : Controller
     {
-        public ActionResult Index()
+		public ActionResult Index()
         {
-            var cart = ShoppingCart.Cart;
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			var cart = ShoppingCart.Cart;
             return View(cart.Items);
         }
 
@@ -46,8 +49,8 @@ namespace MultiShop.Controllers
             };
             return Json(info, JsonRequestBehavior.AllowGet);
         }
-
-        public ActionResult Clear()
+		
+		public ActionResult Clear()
         {
             var cart = ShoppingCart.Cart;
             cart.Clear();

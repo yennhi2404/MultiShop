@@ -25,8 +25,8 @@ namespace MultiShop.Controllers
             }
 			return View();
         }
-        //Download source code tại Sharecode.vn
-        public ActionResult Search(String SupplierId = "", int CategoryId = 0, String Keywords = "")
+		
+		public ActionResult Search(String SupplierId = "", int CategoryId = 0, String Keywords = "")
         {
             if (SupplierId != "")
             {
@@ -49,7 +49,7 @@ namespace MultiShop.Controllers
             return View(db.Products);
         }
 
-        public ActionResult Detail(int id,string SupplierID)
+		public ActionResult Detail(int id,string SupplierID)
         {
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);

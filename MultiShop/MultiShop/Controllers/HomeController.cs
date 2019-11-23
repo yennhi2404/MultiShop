@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml;
@@ -13,7 +14,8 @@ namespace MultiShop.Controllers
     public class HomeController : Controller
     {
         MultiShopDbContext db = new MultiShopDbContext();
-        public ActionResult Index()
+
+		public ActionResult Index()
         {
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);
@@ -63,12 +65,9 @@ namespace MultiShop.Controllers
         }
         
         public ActionResult Saleoff()
-        {
-			
+        {		
 			var model = db.Products.Where(p => p.Discount>0).Take(1);
             return PartialView("_Saleoff", model);
         }
-
-        
-    }
+	}
 }
