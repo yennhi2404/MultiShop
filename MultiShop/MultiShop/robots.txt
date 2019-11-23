@@ -1,0 +1,13 @@
+User-agent: Googlebot
+Disallow: /
+User-agent: *
+Disallow: /
+Crawl-delay: 5
+Disallow: /Account/Login/
+Disallow: /Account/Edit/
+Disallow: /Account/Manage/
+Disallow: /Cart/
+Disallow: /Order/Checkout/
+Disallow: /Order/Detail/
+Disallow: /Order/List/
+Sitemap: http://onlineshop.somee.com/sitemap.xml
