@@ -2,14 +2,14 @@
 	<img class="img-responsive" src="/Content/img/banner-camera.jpg" />
 	<p></p>
 	<div class="nn-megamenu-sidebar-title"><i class="glyphicon glyphicon-tags"></i><h2>Tin tức</h2></div>
-			@foreach (var item in ViewBag.listItems)
-			{
-				<div style="border-bottom: 1px solid black;">
-					<p>@item.Title</p>
-					<p>@item.PubDate</p>
-					<p>
-						<a href="@item.Link">Details</a>
-					</p>
-				</div>
-			}
-	</div>
+	@foreach (var item in ViewBag.listItems)
+	{
+		<div style="border-bottom: 1px solid black;">
+			<p>@item.Title</p>
+			<p>@item.PubDate</p>
+			<p>
+				<a href="@item.Link">Details</a>
+			</p>
+		</div>
+	}
+</div>
