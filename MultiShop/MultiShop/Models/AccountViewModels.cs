@@ -27,6 +27,20 @@ namespace MultiShop.Models
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
+     public class InputModel
+    {
+        [Required]
+        [Display(Name = "Country dialing code")]
+        public string DialingCode { get; set; }
+
+        [Required]
+        [Phone]
+        [Display(Name = "Phone number")]
+        public string PhoneNumber { get; set; }
+     
+        [Display(Name = "Code")]
+        public string VerificationCode { get; set; }
+    }
 
     public class LoginViewModel
     {
