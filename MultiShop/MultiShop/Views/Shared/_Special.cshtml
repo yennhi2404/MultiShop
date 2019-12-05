@@ -18,7 +18,7 @@
                             <a href="/chi-tiet-san-pham/@p.Name.ToAscii().ToLower()_@p.Id" title="@p.Name">@p.Name</a>
                         </h3>
                         <div class="nn-block-product-sidebar-price ">
-                            <span class="">@p.UnitPrice</span>
+							<span class="">@Html.FormatValue(p.UnitPrice, "{0:n} VNĐ")</span>
                         </div>
                     </div>
                 </div>
