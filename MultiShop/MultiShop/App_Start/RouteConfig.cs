@@ -44,6 +44,24 @@ namespace MultiShop
 				namespaces: new[] { "MultiShop.Controllers" }
 			);
 			routes.MapRoute(
+				name: "lien-he",
+				url: "lien-he",
+				defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional },
+				namespaces: new[] { "MultiShop.Controllers" }
+			);
+			routes.MapRoute(
+				name: "thong-tin-ve-multishop",
+				url: "thong-tin-ve-multishop",
+				defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional },
+				namespaces: new[] { "MultiShop.Controllers" }
+			);
+			routes.MapRoute(
+				name: "tim-kiem",
+				url: "tim-kiem",
+				defaults: new { controller = "Product", action = "Search", id = UrlParameter.Optional },
+				namespaces: new[] { "MultiShop.Controllers" }
+			);
+			routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
