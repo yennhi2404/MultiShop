@@ -34,7 +34,7 @@
 								<a href="/chi-tiet-san-pham/@p.Name.ToAscii().ToLower()_@p.Id" title="@p.Name">@p.Name</a>
 							</h3>
 							<div class="nn-product-box-price ">
-								<span class="">@p.UnitPrice</span>
+								<span class="">@Html.FormatValue(p.UnitPrice, "{0:n} VNĐ")</span>
 							</div>
 							<div class="nn-product-box-actions">
 								<button type="button" title="Add to Cart" class="btn btn-default add-to-cart" data-id="@p.Id">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		}
-		<div><a class="pull-right alert-link" href="/san-pham/@c.Name.ToAscii().ToLower()-@c.Id"><h6>Xem thêm...</h6></a></div>
+		<div><a class="pull-right alert-link" href="/san-pham/@c.NameVN.ToAscii().ToLower()-@c.Id"><h6>Xem thêm...</h6></a></div>
 	</div>
 	
 </div>
