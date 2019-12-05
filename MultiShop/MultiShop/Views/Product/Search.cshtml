@@ -16,19 +16,19 @@
         {
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="nn-product-box">
-                    <a href="/chi-tiet/@p.Name.ToAscii().ToLower()_@p.Id">
+                    <a href="/chi-tiet-san-pham/@p.Name.ToAscii().ToLower()_@p.Id">
                         <img class="img-responsive" src="/Content/img/products/@p.Image" />
                     </a>
                     <div class="nn-product-box-descriptions">
                         <h3 class="nn-product-box-name">
-                            <a href="/chi-tiet/@p.Name.ToAscii().ToLower()_@p.Id" title="@p.Name">@p.Name</a>
+                            <a href="/chi-tiet-san-pham/@p.Name.ToAscii().ToLower()_@p.Id" title="@p.Name">@p.Name</a>
                         </h3>
                         <div class="nn-product-box-price ">
-                            <span class=""> @p.UnitPrice</span>
+							<span class=""> @Html.FormatValue(p.UnitPrice, "{0:n} VNĐ")</span>
                         </div>
                         <div class="nn-product-box-actions">
                             <button type="button" title="Add to Cart" class="btn btn-default add-to-cart" data-id="@p.Id">
-                                <span>Add to Cart</span>
+                                <span>Thêm vào giỏ hàng</span>
                             </button>
 
                         </div>
@@ -36,9 +36,6 @@
                 </div>
             </div>
         }
-
-
-
     </div>
 </div>
 

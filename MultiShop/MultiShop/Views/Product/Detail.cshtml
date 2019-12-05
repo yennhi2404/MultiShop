@@ -63,10 +63,7 @@
 						trong kho
 					</p>
 					<div class="price-box">
-
-						<h3>@Model.UnitPrice</h3>
-
-
+						<h3>@Html.FormatValue(Model.UnitPrice, "{0:n} VNĐ")</h3>
 					</div>
 					<div class="add-to-box">
 						<div class="add-to-cart nn-margin-bottom">
@@ -240,7 +237,7 @@
 												<a href="/chi-tiet-san-pham/@s.Name.ToAscii().ToLower()_@s.Id" title="@s.Name">@s.Name</a>
 											</h3>
 											<div class="nn-product-box-price ">
-												<span class="">@s.UnitPrice</span>
+												<span class="">@Html.FormatValue(s.UnitPrice, "{0:n} VNĐ")</span>
 											</div>
 											<div class="nn-product-box-actions">
 												<button type="button" title="Add to Cart" class="btn btn-default add-to-cart" data-id="@s.Id">
@@ -278,7 +275,7 @@
 								<a href="/chi-tiet-san-pham/@p.Name.ToAscii().ToLower()_@p.Id" title="@p.Name">@p.Name</a>
 							</h3>
 							<div class="nn-product-box-price ">
-								<span class=""> @p.UnitPrice</span>
+								<span class=""> @Html.FormatValue(p.UnitPrice, "{0:n} VNĐ")</span>
 							</div>
 							<div class="nn-product-box-actions">
 								<button type="button" title="Add to Cart" class="btn btn-default add-to-cart" data-id="@p.Id">
@@ -307,7 +304,7 @@
 								<a href="/chi-tiet-san-pham/@p.Name.ToLower()_@p.Id" title="@p.Name">@p.Name</a>
 							</h3>
 							<div class="nn-product-box-price ">
-								<span class=""> @p.UnitPrice</span>
+								<span class=""> @Html.FormatValue(p.UnitPrice, "{0:n} VNĐ")</span>
 							</div>
 							<div class="nn-product-box-actions">
 								<button type="button" title="Add to Cart" class="btn btn-default add-to-cart" data-id="@p.Id">
