@@ -119,14 +119,11 @@
 
             <div class="form-group">
                 <div class="col-md-offset-4 col-md-8">
-                    @if ((bool)ViewData["Insert"])
-                    {
+                    
                         <button onclick="form.action = '/Admin/Product/Insert'" class="btn btn-default">Insert</button>
-                    }
-                    @if ((bool)ViewData["Update"])
-                    {
+                    
                         <button onclick="form.action = '/Admin/Product/Update'" class="btn btn-default">Update</button>
-                    }
+                    
                     <button data-access="@ViewData["Delete"]" onclick="form.action = '/Admin/Product/Delete'" class="btn btn-default">Delete</button>
                     <button onclick="form.action = '/Admin/Product/Index'" class="btn btn-default">Reset</button>
                 </div>
