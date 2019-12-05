@@ -38,15 +38,17 @@ namespace MultiShop.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			ViewBag.Message = "Giới thiệu về Multishop";
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			ViewBag.Message = "Liên hệ";
             return View();
         }
         

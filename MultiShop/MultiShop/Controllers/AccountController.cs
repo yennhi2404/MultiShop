@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using MultiShop.Models;
 using System.Data.Entity;
-
+using MultiShop.Helpers;
 
 namespace MultiShop.Controllers
 {
@@ -31,7 +31,7 @@ namespace MultiShop.Controllers
 
         public UserManager<ApplicationUser> UserManager { get; private set; }
 
-        public ActionResult Edit()
+		public ActionResult Edit()
         {
             var model = db.Customers.Find(User.Identity.Name);
             return View(model);
@@ -62,7 +62,7 @@ namespace MultiShop.Controllers
             return RedirectToAction("Login");
         }
 
-        [AllowAnonymous]
+		[AllowAnonymous]
         public ActionResult Forgot()
         {
             return View();
@@ -90,7 +90,14 @@ namespace MultiShop.Controllers
                 return View();
             }
         }
-        [AllowAnonymous, HttpPost]
+		[AllowAnonymous]
+		public ActionResult Reset()
+		{
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			return View();
+		}
+		[AllowAnonymous, HttpPost]
         public ActionResult Reset(String UserName, String TokenCode, String NewPassword)
         {
             var user = UserManager.FindByName(UserName);
@@ -104,6 +111,8 @@ namespace MultiShop.Controllers
 		[AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
 			if (returnUrl != null)
 			{
 				if (returnUrl.Contains("/Admin/"))
@@ -122,7 +131,9 @@ namespace MultiShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (ModelState.IsValid)
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			if (ModelState.IsValid)
             {
                 var user = await UserManager.FindAsync(model.UserName, model.Password);
                 if (user != null)
@@ -140,12 +151,14 @@ namespace MultiShop.Controllers
             return View(model);
         }
 
-        //
-        // GET: /Account/Register
-        [AllowAnonymous]
+		//
+		// GET: /Account/Register
+		[AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			return View();
         }
 
         //
@@ -155,18 +168,22 @@ namespace MultiShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(Customer model)
         {
-            //if (!XCaptcha.IsValid)
-            //{
-            //    ModelState.AddModelError("", "Invalid security code !");
-            //    return View(model);
-            //}
-            if (ModelState.IsValid)
+
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			//if (!XCaptcha.IsValid)
+			//{
+			//    ModelState.AddModelError("", "Invalid security code !");
+			//    return View(model);
+			//}
+			if (ModelState.IsValid)
             {
                 var user = new ApplicationUser() { UserName = model.Id };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    db.Customers.Add(model);
+					
+					db.Customers.Add(model);
                     db.SaveChanges();
 
                     await SignInAsync(user, isPersistent: false);
@@ -201,11 +218,13 @@ namespace MultiShop.Controllers
             return RedirectToAction("Manage", new { Message = message });
         }
 
-        //
-        // GET: /Account/Manage
-        public ActionResult Manage(ManageMessageId? message)
+		//
+		// GET: /Account/Manage
+		public ActionResult Manage(ManageMessageId? message)
         {
-            ViewBag.StatusMessage =
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			ViewBag.StatusMessage =
                 message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
                 : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
                 : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
@@ -222,7 +241,9 @@ namespace MultiShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Manage(ManageUserViewModel model)
         {
-            bool hasPassword = HasPassword();
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			bool hasPassword = HasPassword();
             ViewBag.HasLocalPassword = hasPassword;
             ViewBag.ReturnUrl = Url.Action("Manage");
             if (hasPassword)
@@ -370,11 +391,13 @@ namespace MultiShop.Controllers
             return View(model);
         }
 
-        //
-        // GET: /Account/LogOff
-        public ActionResult LogOff()
+		//
+		// GET: /Account/LogOff
+		public ActionResult LogOff()
         {
-            AuthenticationManager.SignOut();
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			AuthenticationManager.SignOut();
             return RedirectToAction("Index", "Home");
         }
 

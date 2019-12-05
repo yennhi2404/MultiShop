@@ -19,7 +19,7 @@ namespace MultiShop.Controllers
 			ViewBag.listItems = RSSHelper.read(url);
 			if (CategoryID!=0)
             {
-				ViewBag.TieuDe = db.Categories.FirstOrDefault(p => p.Name != null).Name;
+				ViewBag.TieuDe = db.Categories.SingleOrDefault(p => p.Id == CategoryID).Name;
 				var model = db.Products.Where(p => p.CategoryId == CategoryID);
                 return View(model);
             }
@@ -28,7 +28,10 @@ namespace MultiShop.Controllers
 		
 		public ActionResult Search(String SupplierId = "", int CategoryId = 0, String Keywords = "")
         {
-            if (SupplierId != "")
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+
+			if (SupplierId != "")
             {
                 var model = db.Products
                     .Where(p => p.SupplierId == SupplierId);
