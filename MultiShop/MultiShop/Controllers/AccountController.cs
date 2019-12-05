@@ -139,8 +139,8 @@ namespace MultiShop.Controllers
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal(returnUrl);
-                }
+		      return View("VerifyPhone");
+                   }
                 else
                 {
                     ModelState.AddModelError("", "Invalid username or password.");
