@@ -17,7 +17,7 @@
     @foreach (var r in Model)
     {
         <tr>
-            <td>@r.Group</td>
+            <td>@r.iGroup</td>
             <td>@r.Count</td>
             <td>@Html.FormatValue(r.Sum, "{0:c}")</td>
             <td>@Html.FormatValue(r.Min, "{0:c}")</td>
