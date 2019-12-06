@@ -15,6 +15,7 @@ using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 using System.Diagnostics;
+using MultiShop.Helpers;
 
 namespace MultiShop.Controllers
 {
@@ -23,29 +24,27 @@ namespace MultiShop.Controllers
     {
        
       public VerifyPhoneController() { }
-       
-
 
        public InputModel Input { get; set; }
 
-
-
         public ActionResult VerifyPhone()
         {
-            return View();
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			return View();
         }
-       
 
         [HttpPost]
 
         public async Task<ActionResult> OnPost(InputModel model)
         {
 
+			string ur = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(ur);
+			//if (ModelState.IsValid)
+			//{
 
-            //if (ModelState.IsValid)
-            //{
-               
-                    var client = new HttpClient();
+			var client = new HttpClient();
 
                     var AuthyAPIKey = "E09FjK58eXC4oLAovzH9VBxFGzcAlobB";
 
@@ -74,23 +73,25 @@ namespace MultiShop.Controllers
             {
                 return RedirectToAction("SecondView", "VerifyPhone");
             }
-
-
-
         }
         public ActionResult SecondView()
         {
-            return View();
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			return View();
         }
         public ActionResult Confirm(InputModel model)
         {
-            return View(model);
+			string url = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(url);
+			return View(model);
         }
         [HttpPost]
         public async Task<ActionResult> ConfirmPhone(InputModel model)
         {
-
-            var client = new HttpClient();
+			string ur = "https://vnexpress.net/rss/giai-tri.rss";
+			ViewBag.listItems = RSSHelper.read(ur);
+			var client = new HttpClient();
 
             // Add authentication header
             var AuthyAPIKey = "E09FjK58eXC4oLAovzH9VBxFGzcAlobB";
@@ -115,10 +116,4 @@ namespace MultiShop.Controllers
         }
         
     }
-
-
-
-
 }
-    
-
