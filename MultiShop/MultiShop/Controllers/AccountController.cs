@@ -109,8 +109,10 @@ namespace MultiShop.Controllers
 		// GET: /Account/Login
 		
 		[AllowAnonymous]
-        public ActionResult Login(string returnUrl)
-        {
+
+
+		public ActionResult Login(string returnUrl)
+		{
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);
 			if (returnUrl != null)
@@ -121,55 +123,58 @@ namespace MultiShop.Controllers
 				}
 				ViewBag.ReturnUrl = returnUrl;
 			}
-				return View();
-        }
+			return View();
+		}
 
-        //
-        // POST: /Account/Login
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
-        {
+		//
+		// POST: /Account/Login
+		[HttpPost]
+		[AllowAnonymous]
+		[ValidateAntiForgeryToken]
+		public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
+		{
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);
+			Session.Remove("guid");
+			// AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
 			if (ModelState.IsValid)
-            {
-                var user = await UserManager.FindAsync(model.UserName, model.Password);
-                if (user != null)
-                {
-                    await SignInAsync(user, model.RememberMe);
-					//return RedirectToLocal(returnUrl);
+			{
+				var user = await UserManager.FindAsync(model.UserName, model.Password);
+				if (user != null)
+				{
+					await SignInAsync(user, model.RememberMe);
+					// return RedirectToLocal(returnUrl);
 					return View("VerifyPhone");
-				}
-                else
-                {
-                    ModelState.AddModelError("", "Invalid username or password.");
-                }
-            }
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
+				}
+				else
+				{
+					ModelState.AddModelError("", "Invalid username or password.");
+				}
+			}
+
+			// If we got this far, something failed, redisplay form
+			return View(model);
+		}
 
 		//
 		// GET: /Account/Register
 		[AllowAnonymous]
-        public ActionResult Register()
-        {
+		public ActionResult Register()
+		{
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);
+			Session.Remove("guid");
 			return View();
-        }
+		}
 
-        //
-        // POST: /Account/Register
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(Customer model)
-        {
-
+		//
+		// POST: /Account/Register
+		[HttpPost]
+		[AllowAnonymous]
+		[ValidateAntiForgeryToken]
+		public async Task<ActionResult> Register(Customer model)
+		{
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);
 			//if (!XCaptcha.IsValid)
@@ -178,31 +183,30 @@ namespace MultiShop.Controllers
 			//    return View(model);
 			//}
 			if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser() { UserName = model.Id };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-					
+			{
+				var user = new ApplicationUser() { UserName = model.Id };
+				var result = await UserManager.CreateAsync(user, model.Password);
+				if (result.Succeeded)
+				{
 					db.Customers.Add(model);
-                    db.SaveChanges();
+					db.SaveChanges();
 
-                    await SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    AddErrors(result);
-                }
-            }
+					await SignInAsync(user, isPersistent: false);
+					return RedirectToAction("Index", "Home");
+				}
+				else
+				{
+					AddErrors(result);
+				}
+			}
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
+			// If we got this far, something failed, redisplay form
+			return View(model);
+		}
 
-        //
-        // POST: /Account/Disassociate
-        [HttpPost]
+		//
+		// POST: /Account/Disassociate
+		[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Disassociate(string loginProvider, string providerKey)
         {
@@ -399,6 +403,7 @@ namespace MultiShop.Controllers
 			string url = "https://vnexpress.net/rss/giai-tri.rss";
 			ViewBag.listItems = RSSHelper.read(url);
 			AuthenticationManager.SignOut();
+			Session.Remove("guid");
             return RedirectToAction("Index", "Home");
         }
 
