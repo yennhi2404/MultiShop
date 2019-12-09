@@ -14,7 +14,8 @@ using System.ComponentModel.DataAnnotations;
         public string Address { get; set; }
         public string Description { get; set; }
         public double Amount { get; set; }
+		public string Result { get; set; }
 
-        public virtual Customer Customer { get; set; }
+		public virtual Customer Customer { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
