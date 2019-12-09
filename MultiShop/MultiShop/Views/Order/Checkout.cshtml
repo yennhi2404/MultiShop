@@ -6,74 +6,81 @@
 
 <h2>Checkout</h2>
 
-@using (Html.BeginForm("Purchase", "Order")) 
+@using (Html.BeginForm("Purchase", "Order", FormMethod.Post)) 
 {
-    <div class="form-horizontal">
+<div class="form-horizontal">
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Customer Name</label>
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.CustomerId, new { @class = "form-control" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Tên khách hàng</label>
+		<div class="col-md-10">
+			@Html.TextBoxFor(model => model.CustomerId, new { @class = "form-control" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Order Date</label>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.OrderDate, new { @class = "form-control" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Ngày đặt</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.OrderDate, new { @class = "form-control" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Required Date</label>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.RequireDate, new { @class = "form-control" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Ngày yêu cầu giao</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.RequireDate, new { @class = "form-control" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Receiver Name</label>
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Receiver, new { @class = "form-control" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Tên người nhận</label>
+		<div class="col-md-10">
+			@Html.TextBoxFor(model => model.Receiver, new { @class = "form-control" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Email Address</label>
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Email</label>
+		<div class="col-md-10">
+			@Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Total Amount</label>
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Amount, new { @class = "form-control",@readonly="true" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Tổng tiền</label>
+		<div class="col-md-10">
+			@Html.TextBoxFor(model => model.Amount, new { @class = "form-control", @readonly = "true" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Bank Account</label>
-            <div class="col-md-10">
-                @Html.TextBox("BankAccount", null, new { @class = "form-control" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Tài khoản ngân hàng</label>
+		<div class="col-md-10">
+			@Html.TextBox("BankAccount", null, new { @class = "form-control" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Description</label>
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows="5" })
-            </div>
-        </div>
+	<div class="form-group">
+		<label class="control-label col-md-2">Số điện thoại + Mô tả</label>
+		<div class="col-md-10">
+			@Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Purchase" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+	<div class="form-group">
+		<div class="col-md-10">
+			@Html.HiddenFor(model => model.Result)
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Thanh toán với Paypal" class="btn btn-default" />
+			<a class="btn btn-default" name="paymentNganLuong" href="https://www.nganluong.vn/?portal=nganluong&amp;page=user_register">Thanh toán với Ngân Lượng</a>
+		</div>
+	</div>
+</div>
 }
-<h2>The Selected Items</h2>
+@*<h2>The Selected Items</h2>
 <table class="table table-hover">
     <tr>
         <th>Id</th>
@@ -107,4 +114,4 @@
         <td>2</td>
         <td>$190</td>
     </tr>
-</table>
+</table>*@
